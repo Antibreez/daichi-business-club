@@ -1,0 +1,45 @@
+.club-program-advantages {
+  margin-bottom: 120px;
+}
+
+.club-program-advantages__block {
+  display: flex;
+  padding: 40px;
+  background: linear-gradient(92.41deg, #007fff 0%, #22283f 100.19%);
+  border-radius: 16px;
+  max-height: 460px;
+}
+
+.club-program-advantages__title {
+  width: calc((100% - 80px) / 3);
+  font-size: 32px;
+  line-height: 37px;
+  color: #fff;
+  margin: 0;
+}
+
+.club-program-advantages__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: calc((100% - 80px) / 3 * 2);
+  margin-top: -40px;
+}
+
+.club-program-advantages__item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 40px;
+  width: calc((100% - 40px) / 2);
+
+  img {
+    margin-right: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: #fff;
+  }
+}
