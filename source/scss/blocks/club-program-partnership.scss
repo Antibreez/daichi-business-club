@@ -69,3 +69,84 @@
   color: #fff;
   padding-top: 16px;
 }
+
+@include desktop-m {
+  .club-program-partnership {
+    margin-bottom: 64px;
+  }
+
+  .club-program-partnership__item {
+    width: calc((100% - 24px) / 2);
+
+    &:nth-child(n) {
+      margin-right: 0;
+    }
+
+    &:not(:nth-child(2n)) {
+      margin-right: 24px;
+    }
+  }
+
+  .club-program-partnership__text {
+    width: 100%;
+
+    span {
+      width: 100%;
+      padding-top: 55px;
+      min-height: 158px;
+    }
+  }
+}
+
+@include tablet {
+  .club-program-partnership__title {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 24px;
+  }
+
+  .club-program-partnership__desc {
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 40px;
+  }
+
+  .club-program-partnership__list {
+    margin-top: -16px;
+  }
+
+  .club-program-partnership__item {
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 16px;
+
+    &:nth-child(n) {
+      margin-right: 0;
+    }
+  }
+
+  .club-program-partnership__text {
+    span {
+      min-height: auto;
+      padding: 65px 24px 24px;
+    }
+  }
+}
+
+@include mobile {
+  .club-program-partnership {
+    margin-bottom: 40px;
+  }
+
+  .club-program-partnership__desc {
+    margin-bottom: 32px;
+  }
+
+  .club-program-partnership__list {
+    margin-top: -8px;
+  }
+
+  .club-program-partnership__item {
+    margin-top: 8px;
+  }
+}

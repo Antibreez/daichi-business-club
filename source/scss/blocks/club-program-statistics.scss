@@ -2,6 +2,12 @@
   margin-bottom: 120px;
 }
 
+.club-program-statistics__block {
+  &.mobile {
+    display: none;
+  }
+}
+
 .club-program-statistics__header {
   display: flex;
   justify-content: space-between;
@@ -71,6 +77,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: -16px;
+}
+
+.club-program-statistics__chip {
+  width: calc((100% - 16px) / 2);
+  padding: 24px;
+  background: #f4f4f8;
+  border-radius: 16px;
+  margin-top: 16px;
 
   &.daichi {
     .club-program-statistics__chip-value {
@@ -83,14 +97,6 @@
       color: #32a3fd;
     }
   }
-}
-
-.club-program-statistics__chip {
-  width: calc((100% - 16px) / 2);
-  padding: 24px;
-  background: #f4f4f8;
-  border-radius: 16px;
-  margin-top: 16px;
 
   &.third {
     width: calc((100% - 32px) / 3);
@@ -126,6 +132,10 @@
   justify-content: center;
   align-items: center;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   img {
     margin-left: 16px;
   }
@@ -152,6 +162,176 @@
 
     img {
       transform: rotate(180deg);
+    }
+  }
+}
+
+@include desktop-m {
+  .club-program-statistics {
+    margin-bottom: 80px;
+  }
+
+  .club-program-statistics__header-part {
+    width: calc((100% - 24px) / 2);
+
+    &.daichi {
+      .club-program-statistics__header-logo {
+        width: 144px;
+      }
+    }
+
+    &.midea {
+      .club-program-statistics__header-logo {
+        width: 133px;
+      }
+
+      .club-program-statistics__header-desc {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .club-program-statistics__header-name {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .club-program-statistics__header-desc {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .club-program-statistics__header-logo-block {
+    min-height: 120px;
+    margin: 0 0 16px;
+  }
+
+  .club-program-statistics__content-part {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .club-program-statistics__chip {
+    &,
+    &.third {
+      width: 100%;
+    }
+  }
+}
+
+@include tablet {
+  .club-program-statistics {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 64px;
+  }
+
+  .club-program-statistics__block {
+    display: none;
+
+    &.mobile {
+      display: block;
+    }
+  }
+
+  .club-program-statistics__toggle-btn {
+    display: none;
+  }
+
+  .club-program-statistics__slider {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .club-program-statistics__slider-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+
+  .club-program-statistics__header-part {
+    padding: 40px 24px 24px;
+    width: 264px;
+    margin-left: 16px;
+    min-height: 264px;
+    display: flex;
+    flex-direction: column;
+
+    &.daichi {
+      .club-program-statistics__header-logo {
+        width: 99px;
+      }
+    }
+
+    &.midea {
+      .club-program-statistics__header-logo {
+        width: 96px;
+      }
+    }
+  }
+
+  .club-program-statistics__header-logo-block {
+    min-height: 70px;
+    margin: 0 0 14px;
+  }
+
+  .club-program-statistics__header-name {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: auto;
+  }
+
+  .club-program-statistics__header-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .club-program-statistics__chip,
+  .club-program-statistics__chip.third {
+    height: auto;
+    margin-top: 0;
+    width: 190px;
+    margin-left: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .club-program-statistics__chip {
+    &:last-child {
+      margin-right: 64px;
+    }
+  }
+
+  .club-program-statistics__chip-value {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: auto;
+  }
+
+  .club-program-statistics__chip-desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@include mobile {
+  .club-program-statistics {
+    margin-bottom: 40px;
+  }
+
+  .club-program-statistics__slider-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .club-program-statistics__header-part {
+    margin-left: 16px;
+  }
+
+  .club-program-statistics__chip {
+    &:last-child {
+      margin-right: 16px;
     }
   }
 }

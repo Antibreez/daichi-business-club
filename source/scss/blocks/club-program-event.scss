@@ -36,7 +36,7 @@
   line-height: 55px;
   font-weight: 500;
   color: $text-main;
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   max-width: 580px;
   position: relative;
   z-index: 3;
@@ -69,4 +69,118 @@
   width: 200px;
   height: auto;
   z-index: 3;
+}
+
+@include desktop-m {
+  .club-program-event {
+    margin-bottom: 67px;
+  }
+
+  .club-program-event__block {
+    padding: 80px 55px;
+  }
+
+  .club-program-event__chip {
+    width: 150px;
+    height: auto;
+  }
+
+  .club-program-event__img {
+    object-position: top 47% left 50%;
+  }
+}
+
+@include tablet {
+  .club-program-event {
+    margin-bottom: 47px;
+  }
+
+  .club-program-event__block {
+    padding: 80px 42px;
+    min-height: 528px;
+  }
+
+  .club-program-event__title {
+    font-size: 32px;
+    line-height: 37px;
+    max-width: 60%;
+  }
+
+  .club-program-event__desc {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 52%;
+  }
+
+  .club-program-event__img {
+    object-position: top 35% left 50%;
+  }
+
+  .club-program-event__chip {
+    width: 110px;
+    right: 24px;
+  }
+}
+
+@include mobile {
+  .club-program-event {
+    margin-bottom: 32px;
+  }
+
+  .club-program-event__block {
+    padding: 80px 24px 24px;
+    min-height: auto;
+
+    &::after {
+      background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 17%, rgba(255, 255, 255, 0) 60.67%);
+    }
+  }
+
+  .club-program-event__title {
+    font-size: 24px;
+    line-height: 28px;
+    max-width: none;
+  }
+
+  .club-program-event__desc {
+    max-width: 400px;
+  }
+
+  .club-program-event__link {
+    width: 200px;
+  }
+
+  .club-program-event__chip {
+    width: 96px;
+  }
+
+  .club-program-event__img {
+    object-position: top 45% left 50%;
+  }
+}
+
+@media (max-width: 629px) {
+  .club-program-event__img {
+    object-position: top 38% left 50%;
+  }
+}
+
+@media (max-width: 499px) {
+  .club-program-event__img {
+    object-position: top 25% left 50%;
+  }
+
+  .club-program-event__block {
+    &::after {
+      background: linear-gradient(270deg, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 60.67%);
+    }
+  }
+}
+
+@media (max-width: 419px) {
+  .club-program-event__img {
+    object-position: top 0 left 50%;
+    width: 142%;
+    height: 142%;
+  }
 }
